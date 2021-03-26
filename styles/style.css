@@ -1,0 +1,111 @@
+*, *::before, *::after{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: black;
+	color: white;
+}
+
+header {
+	text-align: center;
+}
+
+.container{
+	padding-top: 50px;
+	display: grid;
+	grid-template:repeat(3, 1fr) / repeat(3, 1fr);
+	margin: 0 auto;
+	justify-content: center;
+	align-items: center;
+}
+  
+.square {
+	height: 200px;
+	font-size: 200px;
+	background-color: black;
+	border: 5px solid white;
+	border-top: none;
+	border-left: none;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.square.cross::after{
+	content: '✕';
+	font-size: 200px;
+}
+.square.circle::after{
+	content: '○';
+	font-size: 200px;
+}
+
+.square.cross.animation{
+	animation: animate 1.5s linear infinite;
+}
+
+.square:nth-child(7), 
+.square:nth-child(8), 
+.square:nth-child(9) {
+	border-bottom: none;
+}
+
+.square:nth-child(3), 
+.square:nth-child(6), 
+.square:nth-child(9) {
+	border-right: none;
+}
+
+.text-container{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.player-text,
+.player-bar,
+.computer-text{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 21px;
+}
+
+.player-points,
+.player-bar-points,
+.computer-points{
+	font-size: 40px;
+}
+
+.changeText{
+	padding-top: 50px;
+	font-size: 40px;
+	height: auto;
+	width: auto;
+}
+
+.restartBtn-container{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.restartBtn {
+	position: absolute;
+	bottom: 5%;
+  background-color:  white;
+  border: none;
+  color: black;
+  padding: 25px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+	border-radius: 5px;
+	outline: none;
+}
