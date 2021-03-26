@@ -1,5 +1,7 @@
 # Simple-Tic-Tac-Toe
 
+Demo:https://zan-hiro.github.io/Simple-Tic-Tac-Toe/
+
 This is simple Tic-Tac-Toe Game for the odin project.
 
 If you interested in the odin project, you should check the URL🔽
